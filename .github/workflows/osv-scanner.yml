@@ -19,14 +19,14 @@ permissions:
 jobs:
   scan-scheduled:
     if: ${{ github.event_name == 'push' || github.event_name == 'schedule' }}
-    uses: "another-rex/staging-osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@fix-workflow-naming"  # v1.7.1
+    uses: "shahar-h/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@patch-1"
     permissions:
       contents: read
       # Require writing security events to upload SARIF file to security tab
       security-events: write
   scan-pr:
     if: ${{ github.event_name == 'pull_request' || github.event_name == 'merge_group' }}
-    uses: "another-rex/staging-osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml@fix-workflow-naming"  # v1.7.1
+    uses: "shahar-h/staging-osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml@patch-1"
     permissions:
       contents: read
       # Require writing security events to upload SARIF file to security tab
