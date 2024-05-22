@@ -26,7 +26,7 @@ jobs:
       security-events: write
   scan-pr:
     if: ${{ github.event_name == 'pull_request' || github.event_name == 'merge_group' }}
-    uses: "shahar-h/staging-osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml@patch-1"
+    uses: "shahar-h/osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml@patch-1"
     permissions:
       contents: read
       # Require writing security events to upload SARIF file to security tab
