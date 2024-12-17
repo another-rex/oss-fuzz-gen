@@ -70,5 +70,7 @@ by this framework:
 | libusb | 11.12 | 
 | json | 10.84 |
 
+
+
 \* Percentage coverage is calculated using a denominator of the total lines of source code compiled during the
 OSS-Fuzz build process for the entire project.
