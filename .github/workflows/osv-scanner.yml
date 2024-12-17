@@ -22,6 +22,4 @@ jobs:
   scan-pr:
     uses: "google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@v1.9.1"
     with:
-      scan-args: |-
-        --upload-sarif=false
-        .
+      upload-sarif: false
